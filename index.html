@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Login Form</title>
+        <!-- ! font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- ! css file -->
+        <link rel="stylesheet" href="/styles/index.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <h3>login</h3>
+            <p style="color:#1B365D;text-align: center;" id="error"></p>
+            <form action="#" >
+                <div class="field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" placeholder="Email or Phone" id="email" >
+                </div>
+                <div class="field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" id="password" >
+                </div>
+                <a href="#">Forgot Password?</a>
+                <div class="loginCircle">
+                    <button  type="submit" onclick="myFun()"  class="fa-solid fa-check"  ></button>
+
+                    <!-- <button disabled  type="submit" onclick="myFun()"  class="fa-solid fa-check"  value="khan"></button> -->
+
+                    <!-- icons -->
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-microsoft"></i>
+                </div>
+            </form>
+        
+
+        </div>
+    
+        <script>
+            // function myFun(){
+            //     setTimeout(function () {
+                      
+            //            window.location='home.html'
+            //            }, 1000);
+            //         }
+            function myFun(){
+                const a="sibghatayan@gmail.com";
+                const b=12345;
+                const email=document.getElementById('email').value;
+                const passord=document.getElementById('password').value;
+                if(email=="" && passord==""){
+                    // document.getElementById('error').innerText='please fill out the field';
+                    //  setTimeout(  function(){ window.location="index.html"}, 1000);
+                    alert("please fill out the field")
+                
+                    }
+                
+               else if(email==a && passord==b){
+                    setInterval(function () {
+                         document.getElementById('error').innerText='success'
+                        window.location='home.html'
+                        }, 1000);
+                   
+                }
+                else{
+                    alert('Wrong Email OR password');
+              
+                }
+            }
+
+
+
+
+            
+            
+            // const loginClick = () => {
+                
+            //     history.pushState(null, null, '/home.html')
+            // }
+           
+        </script>
+    </body>
+    </html>
